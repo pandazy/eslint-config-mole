@@ -1,6 +1,6 @@
 {
   "name": "@pandazy/eslint-config-mole",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared eslint rules used by pandazy projects",
   "main": "index.js",
   "repository": {
