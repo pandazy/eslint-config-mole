@@ -1,22 +1,25 @@
 {
-	"name": "@pandazy/eslint-config-mole",
-	"version": "0.1.0",
-	"description": "Shared eslint rules used by pandazy projects",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/pandazy/eslint-config-mole.git"
-	},
-	"keywords": [
-		"eslint"
-	],
-	"author": "Martin Zheng",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/pandazy/eslint-config-mole/issues"
-	},
-	"homepage": "https://github.com/pandazy/eslint-config-mole#readme",
-	"peerDependencies": {
-		"eslint": ">= 8"
-	}
+  "name": "@pandazy/eslint-config-mole",
+  "version": "0.1.0",
+  "description": "Shared eslint rules used by pandazy projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandazy/eslint-config-mole.git"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "Martin Zheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandazy/eslint-config-mole/issues"
+  },
+  "homepage": "https://github.com/pandazy/eslint-config-mole#readme",
+  "peerDependencies": {
+    "eslint": ">= 8"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
