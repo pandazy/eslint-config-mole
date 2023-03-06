@@ -1,34 +1,41 @@
 module.exports = {
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
   "env": {
     "browser": true,
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "prettier", "import"],
   "rules": {
-    "indent": "off",
-    "@typescript-eslint/indent": ["error", 2],
-    "no-explicit-any": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "space-before-blocks": "off",
-    "@typescript-eslint/space-before-blocks": ["error"],
-    "@typescript-eslint/sort-type-union-intersection-members": "error",
-    "@typescript-eslint/type-annotation-spacing": ["error", { "after": true }],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
+    "@typescript-eslint/explicit-function-return-type": "error",
     "semi": ["error", "always"],
-    "no-console": "warn",
-    "require-await": "error",
-    "no-trailing-spaces": "error",
-    "max-len": ["error", 125],
-    "arrow-spacing": "error"
-  }
+    "no-console": "off",
+    "indent": ["error", 2],
+    "import/extensions": "off",
+    "max-len": ["error", { "code": 100, ignoreComments: true }],
+    "quotes": ["error", "single", {
+      avoidEscape: true,
+      allowTemplateLiterals: true,
+    }],
+  },
+  "overrides": [
+    {
+      "files": ["**/*.spec.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+      }
+    }
+  ]
 };
